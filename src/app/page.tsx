@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, Linkedin, Twitter, Briefcase, GraduationCap, Lightbulb, Send, Code, Database, Server, Building } from 'lucide-react';
+import { Github, Linkedin, Briefcase, GraduationCap, Lightbulb, Send, Code, Database, Server, Building } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -63,16 +63,16 @@ export default function Home() {
 
       <main className="flex-grow">
         <section id="home" className="container mx-auto py-20 px-4 md:py-32">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center opacity-0 animate-fade-in-up">
-            <div className="space-y-6">
+          <div className="grid grid-cols-1 gap-12 items-center opacity-0 animate-fade-in-up">
+            <div className="space-y-6 text-center">
               <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-primary">Varun Rao</h1>
               <p className="font-headline text-2xl md:text-3xl text-foreground/80">
                 Full-Stack Developer & Entrepreneur
               </p>
-              <p className="text-lg md:text-xl leading-relaxed">
+              <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
                 I build beautiful and functional websites to help businesses grow their digital presence. With a background in engineering and a passion for code, I bring ideas to life on the web.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex justify-center space-x-4">
                 <Button asChild size="lg">
                   <Link href="#projects">View My Work</Link>
                 </Button>
@@ -80,14 +80,10 @@ export default function Home() {
                   <Link href="#contact">Get in Touch</Link>
                 </Button>
               </div>
-              <div className="flex pt-4 space-x-4">
+              <div className="flex pt-4 space-x-4 justify-center">
                 <Link href="#" aria-label="Github"><Github className="w-8 h-8 transition-transform hover:scale-110 hover:text-primary" /></Link>
                 <Link href="#" aria-label="LinkedIn"><Linkedin className="w-8 h-8 transition-transform hover:scale-110 hover:text-primary" /></Link>
-                <Link href="#" aria-label="Twitter"><Twitter className="w-8 h-8 transition-transform hover:scale-110 hover:text-primary" /></Link>
               </div>
-            </div>
-            <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105">
-              <Image src="https://picsum.photos/seed/portfolio/800/1000" alt="Varun Rao" layout="fill" objectFit="cover" data-ai-hint="professional portrait" />
             </div>
           </div>
         </section>
@@ -182,7 +178,6 @@ export default function Home() {
           <div className="flex justify-center space-x-6 mb-4">
             <Link href="#" aria-label="Github"><Github className="w-7 h-7 transition-transform hover:scale-110 hover:text-primary" /></Link>
             <Link href="#" aria-label="LinkedIn"><Linkedin className="w-7 h-7 transition-transform hover:scale-110 hover:text-primary" /></Link>
-            <Link href="#" aria-label="Twitter"><Twitter className="w-7 h-7 transition-transform hover:scale-110 hover:text-primary" /></Link>
           </div>
           <p>&copy; {new Date().getFullYear()} Varun Rao. All Rights Reserved.</p>
         </div>
