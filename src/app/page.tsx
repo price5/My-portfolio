@@ -29,6 +29,7 @@ const projects = [
     description: "A desktop app that lets users track their meals and recommends healthy options based on their health data. I led the backend development.",
     image: "https://picsum.photos/600/400?random=3",
     tags: ["College Project", "Desktop App", "Backend"],
+    link: null,
     hint: "healthy food",
   },
    {
@@ -36,6 +37,7 @@ const projects = [
     description: "A modern, responsive website for a local restaurant to showcase their menu and handle online reservations.",
     image: "https://picsum.photos/600/400?random=4",
     tags: ["Client Work", "React", "UI/UX"],
+    link: null,
     hint: "food menu",
   },
 ];
@@ -65,7 +67,7 @@ export default function Home() {
 
       <main className="flex-grow">
         <section id="home" className="container mx-auto py-20 px-4 md:py-32">
-          <div className="grid grid-cols-1 gap-12 items-center opacity-0 animate-fade-in-up">
+          <div className="grid grid-cols-1 gap-12 items-center animate-fade-in-up">
             <div className="space-y-6 text-center">
               <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-primary">Varun Rao</h1>
               <p className="font-headline text-2xl md:text-3xl text-foreground/80">
@@ -83,15 +85,15 @@ export default function Home() {
                 </Button>
               </div>
               <div className="flex pt-4 space-x-4 justify-center">
-                <Link href="#" aria-label="Github"><Github className="w-8 h-8 transition-transform hover:scale-110 hover:text-primary" /></Link>
-                <Link href="#" aria-label="LinkedIn"><Linkedin className="w-8 h-8 transition-transform hover:scale-110 hover:text-primary" /></Link>
+                <Link href="https://github.com/price5" target="_blank" aria-label="Github"><Github className="w-8 h-8 transition-transform hover:scale-110 hover:text-primary" /></Link>
+                <Link href="https://www.linkedin.com/in/notvarunrao" target="_blank" aria-label="LinkedIn"><Linkedin className="w-8 h-8 transition-transform hover:scale-110 hover:text-primary" /></Link>
               </div>
             </div>
           </div>
         </section>
 
         <section id="about" className="py-20 px-4 bg-secondary">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="space-y-8">
               <h2 className="font-headline text-4xl font-bold text-primary">About Me</h2>
               <div className="space-y-4 text-lg">
@@ -121,7 +123,7 @@ export default function Home() {
         </section>
 
         <section id="projects" className="py-20 px-4">
-          <div className="container mx-auto text-center space-y-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="container mx-auto text-center space-y-12 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <div className="space-y-4">
               <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">My Work</h2>
               <p className="text-lg md:text-xl max-w-3xl mx-auto">A selection of projects that showcase my skills in web development, from client work to personal experiments.</p>
@@ -131,7 +133,7 @@ export default function Home() {
                 <Card key={index} className="text-left overflow-hidden group transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col">
                   <CardHeader className="p-0">
                     <div className="relative h-64 w-full">
-                      <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110" data-ai-hint={project.hint}/>
+                      <Image src={project.image} alt={project.title} fill objectFit="cover" className="transition-transform duration-500 group-hover:scale-110" data-ai-hint={project.hint}/>
                     </div>
                   </CardHeader>
                   <CardContent className="p-6 space-y-4 bg-secondary/50 flex-grow flex flex-col">
@@ -157,9 +159,9 @@ export default function Home() {
         </section>
 
         <section id="codenuvix" className="py-20 px-4 bg-secondary">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
              <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-xl">
-                <Image src="https://picsum.photos/800/600?random=5" alt="Local business" layout="fill" objectFit="cover" data-ai-hint="local business storefront"/>
+                <Image src="https://picsum.photos/800/600?random=5" alt="Local business" fill objectFit="cover" data-ai-hint="local business storefront"/>
             </div>
             <div className="space-y-4">
               <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary flex items-center gap-4"><Building/> Codenuvix</h2>
@@ -172,7 +174,7 @@ export default function Home() {
         </section>
 
         <section id="contact" className="py-20 px-4">
-          <div className="container mx-auto max-w-3xl text-center space-y-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <div className="container mx-auto max-w-3xl text-center space-y-8 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
              <div className="space-y-4">
               <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">Let's Connect</h2>
               <p className="text-lg md:text-xl max-w-2xl mx-auto">Have a project in mind, a question, or just want to say hi? My inbox is always open.</p>
@@ -187,8 +189,8 @@ export default function Home() {
       <footer className="bg-secondary text-secondary-foreground py-8">
         <div className="container mx-auto text-center px-4">
           <div className="flex justify-center space-x-6 mb-4">
-            <Link href="#" aria-label="Github"><Github className="w-7 h-7 transition-transform hover:scale-110 hover:text-primary" /></Link>
-            <Link href="#" aria-label="LinkedIn"><Linkedin className="w-7 h-7 transition-transform hover:scale-110 hover:text-primary" /></Link>
+            <Link href="https://github.com/price5" target="_blank" aria-label="Github"><Github className="w-7 h-7 transition-transform hover:scale-110 hover:text-primary" /></Link>
+            <Link href="https://www.linkedin.com/in/notvarunrao" target="_blank" aria-label="LinkedIn"><Linkedin className="w-7 h-7 transition-transform hover:scale-110 hover:text-primary" /></Link>
           </div>
           <p>&copy; {new Date().getFullYear()} Varun Rao. All Rights Reserved.</p>
         </div>
