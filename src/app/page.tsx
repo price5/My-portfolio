@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, Linkedin, Briefcase, GraduationCap, Lightbulb, Send, Code, Database, Server, Building } from 'lucide-react';
+import { Github, Linkedin, Briefcase, GraduationCap, Lightbulb, Send, Code, Database, Server, Building, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -9,25 +9,27 @@ import { ContactForm } from '@/components/contact-form';
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce site for a local artisan, built with Next.js and Stripe for payments.",
+    title: "Price Furniture Mall",
+    description: "A premium, modern, and responsive website developed for a local furniture business to enhance their online presence.",
     image: "https://picsum.photos/600/400?random=1",
-    tags: ["Client Work", "Next.js", "Stripe"],
-    hint: "online shopping",
+    tags: ["Client Work", "Next.js", "UI/UX"],
+    link: "https://www.pricefurnituremall.com",
+    hint: "furniture storefront",
   },
   {
-    title: "College Event Manager",
-    description: "A web app to manage and promote college events, workshops, and fests, streamlining registration.",
+    title: "ThreatLens",
+    description: "A cyber threat intelligence platform developed for a hackathon, providing insights into online security threats.",
     image: "https://picsum.photos/600/400?random=2",
-    tags: ["College Project", "React", "Firebase"],
-    hint: "event management",
+    tags: ["Hackathon", "Next.js", "Firebase"],
+    link: "https://threat-lens-nine.vercel.app",
+    hint: "cyber security",
   },
   {
-    title: "Personal Portfolio V1",
-    description: "My first personal portfolio website, exploring creative designs and web animations.",
+    title: "HMP - Healthy Meal Planner",
+    description: "A desktop app that lets users track their meals and recommends healthy options based on their health data. I led the backend development.",
     image: "https://picsum.photos/600/400?random=3",
-    tags: ["Personal Project", "HTML/CSS", "JavaScript"],
-    hint: "web design",
+    tags: ["College Project", "Desktop App", "Backend"],
+    hint: "healthy food",
   },
    {
     title: "Restaurant Website",
@@ -126,16 +128,25 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {projects.map((project, index) => (
-                <Card key={index} className="text-left overflow-hidden group transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <Card key={index} className="text-left overflow-hidden group transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col">
                   <CardHeader className="p-0">
                     <div className="relative h-64 w-full">
                       <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-110" data-ai-hint={project.hint}/>
                     </div>
                   </CardHeader>
-                  <CardContent className="p-6 space-y-4 bg-secondary/50">
-                    <CardTitle className="font-headline text-2xl text-primary">{project.title}</CardTitle>
-                    <CardDescription className="text-base">{project.description}</CardDescription>
-                     <div className="flex flex-wrap gap-2">
+                  <CardContent className="p-6 space-y-4 bg-secondary/50 flex-grow flex flex-col">
+                    <div className="flex justify-between items-start">
+                      <CardTitle className="font-headline text-2xl text-primary">{project.title}</CardTitle>
+                      {project.link && (
+                        <Button asChild variant="ghost" size="icon" className="flex-shrink-0">
+                          <Link href={project.link} target="_blank" aria-label={`Live demo for ${project.title}`}>
+                             <ExternalLink className="w-5 h-5 transition-transform hover:scale-110" />
+                          </Link>
+                        </Button>
+                      )}
+                    </div>
+                    <CardDescription className="text-base flex-grow">{project.description}</CardDescription>
+                     <div className="flex flex-wrap gap-2 pt-2">
                         {project.tags.map(tag => <Badge key={tag} variant={tag === "Client Work" ? "default" : "secondary"} className={tag === "Client Work" ? "bg-primary text-primary-foreground" : "bg-accent/20 text-accent-foreground"}>{tag}</Badge>)}
                     </div>
                   </CardContent>
