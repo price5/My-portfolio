@@ -11,7 +11,7 @@ const projects = [
   {
     title: "Price Furniture Mall",
     description: "A premium, modern, and responsive website developed for a local furniture business to enhance their online presence.",
-    image: "https://picsum.photos/600/400?random=1",
+    image: "/price-furniture-mall.jpg",
     tags: ["Client Work", "Next.js", "UI/UX"],
     link: "https://www.pricefurnituremall.com",
     hint: "furniture storefront",
@@ -19,7 +19,7 @@ const projects = [
   {
     title: "ThreatLens",
     description: "A cyber threat intelligence platform developed for a hackathon, providing insights into online security threats.",
-    image: "https://picsum.photos/600/400?random=2",
+    image: "/threatlens.jpg",
     tags: ["Hackathon", "Next.js", "Firebase"],
     link: "https://threat-lens-nine.vercel.app",
     hint: "cyber security",
@@ -27,7 +27,7 @@ const projects = [
   {
     title: "HMP - Healthy Meal Planner",
     description: "A desktop app that lets users track their meals and recommends healthy options based on their health data. I led the backend development.",
-    image: "https://picsum.photos/600/400?random=3",
+    image: "/hmp.jpg",
     tags: ["College Project", "Desktop App", "Backend"],
     link: null,
     hint: "healthy food",
@@ -35,7 +35,7 @@ const projects = [
    {
     title: "Swachhagraha",
     description: "A waste management tool to help track and manage waste.",
-    image: "https://picsum.photos/600/400?random=4",
+    image: "/swachhagraha.jpg",
     tags: ["Personal Project", "React", "UI/UX"],
     link: "https://swachhagraha.vercel.app",
     hint: "waste management recycling",
@@ -161,7 +161,7 @@ export default function Home() {
         <section id="codenuvix" className="py-20 px-4 bg-secondary">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
              <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-xl">
-                <Image src="https://picsum.photos/800/600?random=5" alt="Local business" fill objectFit="cover" data-ai-hint="local business storefront"/>
+                <Image src="/codenuvix.jpg" alt="Local business" fill objectFit="cover" data-ai-hint="local business storefront"/>
             </div>
             <div className="space-y-4">
               <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary flex items-center gap-4"><Building/> Codenuvix</h2>
