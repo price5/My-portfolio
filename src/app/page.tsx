@@ -33,12 +33,12 @@ const projects = [
     hint: "healthy food",
   },
    {
-    title: "Restaurant Website",
-    description: "A modern, responsive website for a local restaurant to showcase their menu and handle online reservations.",
+    title: "Swachhagraha",
+    description: "A waste management tool to help track and manage waste.",
     image: "https://picsum.photos/600/400?random=4",
-    tags: ["Client Work", "React", "UI/UX"],
-    link: null,
-    hint: "food menu",
+    tags: ["Personal Project", "React", "UI/UX"],
+    link: "https://swachhagraha.vercel.app",
+    hint: "waste management recycling",
   },
 ];
 
