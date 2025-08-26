@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 export function ContactForm() {
   return (
     <form
-      action="https://formsubmit.co/poppystick123@gmail.com"
+      action="https://formsubmit.co/404ffd4aab3101199807bbff7abebf29"
       method="POST"
       className="space-y-6"
     >
